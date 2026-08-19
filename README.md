@@ -1,55 +1,49 @@
-# ESP32 LED Blinking 💡
+# ESP32 LED Blinking Project
 
-## 📌 Project Description
+A basic Embedded Systems project using ESP32 DevKit V1 to blink an LED using GPIO 4.
 
-This is a simple LED blinking project using an ESP32 DevKit V1 and Arduino IDE.
-
-In this project, an LED is connected to GPIO 4 of the ESP32. The LED turns ON for 1 second and OFF for 1 second continuously.
-
-## 🛠️ Components Required
+## 🔧 Components Used
 
 - ESP32 DevKit V1
 - LED
-- 220Ω Resistor
+- Resistor
 - Breadboard
 - Jumper Wires
 - USB Cable
 
-## 🔌 Circuit Connection
-
-ESP32 GPIO 4 → 220Ω Resistor → LED Long Leg (+)
-
-LED Short Leg (-) → ESP32 GND
-
-## 💻 Software Used
+## 💻 Software
 
 - Arduino IDE
-- ESP32 Board Package
 
-## ⚙️ Working
+## 📌 GPIO Used
 
-The ESP32 controls the LED connected to GPIO 4.
+- GPIO 4
 
-- LED ON → 1 second
-- LED OFF → 1 second
-- The process repeats continuously.
+## ⚙️ Project Description
 
-## 📂 Project Files
+In this project, an LED is connected to GPIO 4 of the ESP32.
+The Arduino IDE is used to program the ESP32 to turn the LED ON and OFF at regular intervals.
 
-- `ledblinking.ino` - Arduino source code
-- `README.md` - Project documentation
+## 🎥 Project Demonstration
 
-## 🚀 Future Improvements
+[Watch the project video on YouTube](https://youtu.be/8VGNBTNp_18)
 
-- Add a push button to control the LED
-- Control the LED using Wi-Fi
-- Control the LED using a mobile application
-- Add multiple LEDs
+## 💡 Code
 
-## 👨‍💻 Author
+```cpp
+#define LED_PIN 4
 
-**Chaithanya Raju Potturi**
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}
 
-## 🎯 Project Goal
+void loop() {
+  digitalWrite(LED_PIN, HIGH);
+  delay(1000);
 
-This project helps to understand ESP32 GPIO control, digital output, and basic Arduino programming.
+  digitalWrite(LED_PIN, LOW);
+  delay(1000);
+}
+
+
+
